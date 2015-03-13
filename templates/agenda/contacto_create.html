@@ -1,0 +1,16 @@
+{% extends "agenda/base.html" %}
+{% load bootstrap %}
+{% block title %}
+	Agregar Contacto
+{% endblock title %}
+{% block content %}
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+			<form method="POST">
+				{% csrf_token %}
+				{{ form|bootstrap }}
+				<button type="submit" class="btn btn-primary">Agregar</button>
+			</form>
+		</div>
+	</div>
+{% endblock content %}
