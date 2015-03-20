@@ -10,7 +10,6 @@
 					<th>Nombre</th>
 					<th>Telefono</th>
 					<th>Grupo</th>
-					<th>Colores</th>
 					<th>Acciones</th>
 				</tr>
 			</thead>
@@ -20,11 +19,6 @@
 					<td>{{ l.nombre }}</td>
 					<td>{{ l.telefono }}</td>
 					<td>{{ l.grupo }}</td>
-					<td>
-						{% for c in l.colores.all %}
-							<span class="badge">{{ c.nombre }}</span>
-						{% endfor %}
-					</td>
 					<td>
 						<a href="{% url 'contacto_update' l.pk %}" class="btn btn-primary">Actualizar</a>
 						<a href="{% url 'contacto_delete' l.pk %}" class="btn btn-danger">Eliminr</a>
