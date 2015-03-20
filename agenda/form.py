@@ -21,6 +21,10 @@ class GrupoForm(forms.ModelForm):
         exclude = ['owner']
 
 
+class SearchForm(forms.Form):
+    search = forms.CharField(widget=forms.TextInput)
+
+
 class LoginForm(forms.Form):
     usuario = forms.CharField(label="Usuario", widget=forms.TextInput())
     password = forms.CharField(label="Password", widget=forms.PasswordInput(render_value=False))
