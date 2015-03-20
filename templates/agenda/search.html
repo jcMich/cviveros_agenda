@@ -1,0 +1,26 @@
+{% extends "agenda/base.html" %}
+{% block title %}
+search
+{% endblock title %}
+{% block content %}
+<table class="table table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Telefono</th>
+        <th>Grupo</th>
+        <th>Ver</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for elemento in lista %}
+    <tr>
+        <td>{{ elemento.nombre }}</td>
+        <td>{{ elemento.telefono }}</td>
+        <td>{{ elemento.grupo }}</td>
+        <td><a href="" class="btn btn-primary">Ver</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

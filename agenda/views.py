@@ -21,9 +21,9 @@ class ContactoCreateView(CreateView):
         return kwargs
 
     def form_valid(self, form):
-        contacto = form.save(commit=False)
-        contacto.owner = self.request.user
-        contacto.save()
+        contact = form.save(commit=False)
+        contact.owner = self.request.user
+        contact.save()
         return super(ContactoCreateView, self).form_valid(form)
 
 

@@ -1,0 +1,16 @@
+{% extends "agenda/base.html" %}
+{% load bootstrap %}
+{% block title %}
+Login
+{% endblock title %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <form method="post">
+            {% csrf_token %}
+            {{ form|bootstrap }}
+            <input type="submit" value="Login" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+{% endblock content %}
